@@ -1,0 +1,357 @@
+/** Шрифты **/
+
+@font-face {
+    font-family: 'woodrow';
+    src: url('woodrow.eot');
+    src: url('woodrow.ttf') format('truetype'), url('woodrow.woff') format('woff'), url('woodrow.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'celestia';
+    src: url('celestia.eot');
+    src: local('Ыть'), url('celestia.ttf') format('truetype'), url('celestia.woff') format('woff'), url('celestia.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Verdana, sans-serif;
+    src: url('verdana-r.ttf'), url('verdana-b.ttf'), url('verdana-i.ttf'), url('verdana-bi.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('roboto.woff');
+    src: local('Ыть'), url('roboto.woff2') format('woff2'), url('roboto.woff') format('woff');
+}
+
+/** Блоки и прочие функциональные элементы дизайна **/
+
+#Dick {
+    width: 42px;
+    height: 1337px;
+    color: #3aeba1;
+}
+
+::selection {
+    background: #3aeba1; /* Safari */
+}
+
+::-moz-selection {
+    background: #3aeba1; /* Firefox */
+}
+
+body {
+    cursor: default;
+}
+
+a {
+    color: #2222cc;
+    text-decoration: underline;
+    text-decoration-skip: none;
+    text-decoration-skip-ink: none;
+    outline: none;
+}
+
+a:visited {
+    color: #2222cc;
+    text-decoration: underline;
+    text-decoration-skip: none;
+    text-decoration-skip-ink: none;
+    outline: none;
+}
+
+a:focus {
+    color: #2222cc;
+    text-decoration: underline;
+    text-decoration-skip: none;
+    text-decoration-skip-ink: none;
+    outline: none;
+}
+
+a:hover {
+    color: #2222cc;
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    border: 0;
+}
+
+#PageHeader {
+    width: 100%;
+    height: 180px;
+    background: url("px/transparent-white.png");
+    font-family: woodrow, serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 52px;
+    text-shadow: 2px 2px 4px black;
+}
+
+h1 {
+    text-align: left;
+    font: 34px woodrow;
+    border-bottom: 0 solid #000;
+    color: #6600cc;
+}
+
+h2 {
+    text-align: left;
+    font: 24px Roboto, Tahoma, Arial, snas-serif;
+    font-family: Roboto, Tahoma, Arial, serif;
+    color: #000;
+}
+
+h3 {
+    text-align: left;
+    font: 18px Roboto;
+    font-family: Roboto, Tahoma, Arial, snas-serif, serif;
+    color: #000;
+}
+
+hr {
+    border: 1px;
+    border-bottom: 0;
+    color: #80f;
+}
+
+#PageContent {
+    height: auto;
+    padding: 10px;
+    margin-top: 0;
+    font: 13px Roboto;
+    font-family: Roboto, Tahoma, Arial, snas-serif, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#FramedText {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-top: 0;
+    font-family: Roboto, Tahoma, Arial, snas-serif, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    cursor: default;
+    color: #000;
+}
+
+#FramedTextDark {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-top: 0;
+    font-family: Roboto, Tahoma, Arial, snas-serif, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    cursor: default;
+    color: white;
+}
+
+#Button {
+    width: 150px;
+    height: 75px;
+    border-bottom: 1px solid #a37642;
+    border-radius: 5px;
+    background-color: #2222cc;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+}
+
+#silent {
+    font-style: normal;
+    color: #aaaaaa;
+}
+
+#SimpleText {
+    font-family: Verdana, serif;
+    font-style: normal;
+    color: #000000;
+    font-size: 12px;
+}
+
+#navigator-tile {
+    display: inline-block;
+    width: 289px;
+    height: 100px;
+    margin: 0 0 3px 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+#navigator-tile-end {
+    display: inline-block;
+    width: 289px;
+    height: 0;
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+#navigator-title {
+    background-color: rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 2px black, 0 0 7px black;
+    font-size: 28px;
+    height: 42%;
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+    text-decoration: underline;
+}
+
+#navigator-title:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 2px black, 0 0 7px black;
+    font-size: 28px;
+    height: 42%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+#navigator-description {
+    background-color: rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 2px black, 0 0 7px black;
+    font-size: 18px;
+    height: 58%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#season-tile {
+    display: block;
+    width: 875px;
+    height: 175px;
+    margin-top: -3px;
+    margin-bottom: 5px;
+    padding: 0;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#season-tile-end {
+    display: block;
+    width: 875px;
+    height: 0;
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+#season-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 80px;
+    font-weight: 100;
+    height: 110px;
+    margin: 0;
+    padding: 0;
+    line-height: 120px;
+    text-align: center;
+}
+
+#season-description {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 36px;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+}
+
+#season-fanwork {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 66px;
+    font-weight: 100;
+    height: 175px;
+    margin: 0;
+    padding: 0;
+    line-height: 175px;
+    text-align: center;
+}
+
+#episode-tile {
+    display: inline-block;
+    width: 435px;
+    height: 245px;
+    margin-bottom: 5px;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    background-color: #888;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#episode-filler {
+    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to top, black 0%, transparent 25%);
+    font-size: 24px;
+    font-weight: 100;
+    width: 420px;
+    height: 245px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    line-height: 25px;
+}
+
+#episode-title {
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+    position: relative;
+    top: 200px;
+    width: 420px;
+    height: 45px;
+    margin-left: 5px;
+    line-height: 45px;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#tip4k {
+    color: #000;
+    text-decoration: none;
+    background-color: #EDA;
+    margin: 0 0 12px 0;
+    padding: 0 0 0 10px;
+}
+
+#PageFooter {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Tahoma, Arial, snas-serif, serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 10px;
+    color: #111111;
+}
