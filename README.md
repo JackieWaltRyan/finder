@@ -2,7 +2,7 @@
 
 Script for searching the music archive for the site "[ТО "Магия Дружбы"](https://bronyru.info/%D1%81%D1%82%D0%B0%D1%84%D1%84/%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0/)".
 
-Online Test: [https://jackiewaltryan.github.io/finder](https://jackiewaltryan.github.io/finder/)
+Online Test: [index.html](https://jackiewaltryan.github.io/finder/index.html)
 
 ### License
 
