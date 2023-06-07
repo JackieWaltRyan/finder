@@ -16,10 +16,12 @@
     <body>
 		<b>Поиск:</b>
 		<label>
-			<input id="input" type="text"/>
+			<input id="input" type="text" style="width: 300px;"/>
 			<script>
 				let input = document.getElementById("input");
-				input.addEventListener("keyup", (event) => search(event.target.value));
+				input.onkeyup = (event) => {
+					search(event.target.value);
+				};
 			</script>
 		</label><br><br>
 		<div id="playlist">

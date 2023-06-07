@@ -16,15 +16,20 @@ function search(value) {
 
                 playlist.innerHTML = "";
 
-                fetch("finder/dataset.json").then(function (response) {
-                    response.json().then(function (dataset) {
-                        let responce = find(value, dataset["."], "", 0, playlist);
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "finder/dataset.json", false);
+                xhr.send();
 
-                        if (responce === false) {
-                            playlist.innerHTML = "К сожалению, ничего не найдено...";
-                        }
-                    })
-                })
+                if (xhr.status === 200) {
+                    let dataset = JSON.parse(xhr.responseText);
+                    let responce = find(value, dataset["."], "", 0, playlist);
+
+                    if (responce === false) {
+                        playlist.innerHTML = "К сожалению, ничего не найдено...";
+                    }
+                } else {
+                    playlist.innerHTML = "Ошибка загрузки файла dataset.json.<br><br>Обновите страницу и попробуйте еще раз.<br><br>Если ошибка повториться обратитесь к администратору сайта для решения проблемы.";
+                }
             }, 1000);
         } else {
             if (temp !== "") {
@@ -59,7 +64,7 @@ function find(value, data, path, count, html) {
                 }
 
                 let a = document.createElement("a");
-                a.href = path + folder;
+                a.href = ("/стафф/музыка/" + path + folder);
                 a.textContent = folder;
                 div.appendChild(a);
 
@@ -106,8 +111,10 @@ function find(value, data, path, count, html) {
                     a.style.textOverflow = "ellipsis";
                     a.style.whiteSpace = "nowrap";
                     a.textContent = data["files"][file].slice(0, -5);
-                    a.addEventListener("click", (event) => send_play("//base.bronyru.info/music/opus/" + path + data["files"][file], event));
-
+                    a.onclick = (event) => {
+                        event.preventDefault();
+                        cm(("//base.bronyru.info/music/opus/" + path + data["files"][file]), event);
+                    };
                     div.appendChild(a);
 
                     let br = document.createElement("br");
@@ -123,9 +130,4 @@ function find(value, data, path, count, html) {
     } catch {
         return false;
     }
-}
-
-function send_play(file, event) {
-    event.preventDefault();
-    cm(file, event);
 }
